@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    bottom: 0;
+}
+
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  }
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(16, 37, 120);
+
+}
+.era{
+
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        font-family: neon;
+        color: orange;
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+        
+    }
+    .game-era{
+        background-color: white;
+        width: 400px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap:2px ;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: -1px 2px 22px 7px rgba(250, 134, 10, 0.75);
+    }
+    .cell{
+        background-color: rgb(134, 184, 254)
+    }
+}
+
+.win-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    .inner-card{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color:rgb(134, 184, 254) ;
+        height: 200px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 5px 2px 17px -1px rgba(57, 57, 57, 0.69);
+        h4{
+            font-family: neon;
+            font-weight: 700;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        p{
+            font-weight: 600;
+            font-family: neon;
+            
+        }
+    
+    }
+}
