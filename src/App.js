@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Winpopup from './component/Winpopup';
 import './style/app.css';
 
@@ -80,7 +80,7 @@ function App() {
       count = count -5;
     }
     
-    console.log(count);
+    
 
     if(count !== 0) newCells[id - 1].flag = !newCells[id - 1].flag;
   }
@@ -97,7 +97,7 @@ function App() {
     setCells(newCells);    
   }
   
-  console.log(win);
+ 
 
   return (
     <div className='era'>
